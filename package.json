@@ -1,0 +1,12 @@
+{
+  "name": "xd-scraper",
+  "version": "0.1.0",
+  "description": "Utility scripts to extract data from Adobe XD share links.",
+  "type": "module",
+  "scripts": {
+    "scrape:xd": "node scripts/scrapeXd.js"
+  },
+  "dependencies": {
+    "playwright": "^1.45.0"
+  }
+}

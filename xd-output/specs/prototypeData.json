@@ -1,0 +1,122 @@
+{
+  "manifest": {
+    "shouldLoadUnifiedApp": true,
+    "allowComments": true,
+    "shareModeViewMode": "ShareModeViewModeDevelopment",
+    "id": "urn:aaid:sc:US:39f5e653-ad73-4d06-923e-ddf0a8356e15",
+    "name": "StreetBot_2026_MVPv2",
+    "thumbnail": {
+      "id": "0db5d572-c69e-48b2-ac9c-243b29a27c23",
+      "path": "homeThumbnail.png",
+      "version": "2",
+      "revision": "2",
+      "component_id": "0db5d572-c69e-48b2-ac9c-243b29a27c23"
+    },
+    "interactions": {
+      "id": "194ae4bc-9cb1-4bda-9449-f3ad567448c8",
+      "path": "interactions/interactions.json",
+      "version": "0",
+      "revision": "0"
+    },
+    "globalResources": {
+      "id": "5d366b9f-33da-4010-a847-322ecca2029c",
+      "path": "globalResources/globalResources.json",
+      "version": "0",
+      "revision": "0"
+    },
+    "artboards": [
+      {
+        "id": "9cfd44b7-ca6d-42d5-ba10-f3e8af9c5947",
+        "name": "MVP- main – 4",
+        "bounds": {
+          "height": 1080,
+          "width": 1920,
+          "y": 0,
+          "x": 1990
+        },
+        "viewport": {
+          "height": 1080
+        },
+        "components": [
+          {
+            "id": "6d0173a6-028f-4f8b-ab39-7024338ab507",
+            "path": "artwork/artboard-9cfd44b7-ca6d-42d5-ba10-f3e8af9c5947/graphics/graphicContent.agc",
+            "version": "1",
+            "revision": "1",
+            "rel": "primary",
+            "type": "agc"
+          },
+          {
+            "id": "24cbfc92-d17b-49c3-8ed9-40d5024d48ad",
+            "path": "artwork/artboard-9cfd44b7-ca6d-42d5-ba10-f3e8af9c5947/thumbnailGraphicContent.png",
+            "version": "0",
+            "revision": "0",
+            "rel": "thumbnail"
+          }
+        ],
+        "resources": [
+          "c1e1c00de76f55dbc9e792b26e1aa223"
+        ]
+      },
+      {
+        "id": "ba9d8120-720c-4dcd-ae96-f4131a49591f",
+        "name": "MVP- main – 5",
+        "bounds": {
+          "height": 1080,
+          "width": 1920,
+          "y": 0,
+          "x": 3956
+        },
+        "viewport": {
+          "height": 1080
+        },
+        "components": [
+          {
+            "id": "80689086-157c-40fc-93fc-c888b11a0fc8",
+            "path": "artwork/artboard-ba9d8120-720c-4dcd-ae96-f4131a49591f/graphics/graphicContent.agc",
+            "version": "1",
+            "revision": "1",
+            "rel": "primary",
+            "type": "agc"
+          },
+          {
+            "id": "a0c7fe39-a0a7-4e79-85e6-887898e0f651",
+            "path": "artwork/artboard-ba9d8120-720c-4dcd-ae96-f4131a49591f/thumbnailGraphicContent.png",
+            "version": "0",
+            "revision": "0",
+            "rel": "thumbnail"
+          }
+        ],
+        "resources": [
+          "c1e1c00de76f55dbc9e792b26e1aa223"
+        ]
+      }
+    ],
+    "renderLayers": null,
+    "resources": {
+      "c1e1c00de76f55dbc9e792b26e1aa223": {
+        "id": "489eb697-958d-4371-9791-57bf6a758221",
+        "path": "resources/c1e1c00de76f55dbc9e792b26e1aa223",
+        "version": "0",
+        "revision": "0"
+      }
+    },
+    "platform": "Web",
+    "docId": "6064db03-ddf6-4288-87af-249b96462ad2",
+    "homeArtboardType": "Web",
+    "disableNavigation": false,
+    "includeSpecs": true,
+    "gridVisible": false,
+    "gridType": "",
+    "includeAssets": true
+  },
+  "linkTemplate": {
+    "href": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:39f5e653-ad73-4d06-923e-ddf0a8356e15{;revision}{?component_id,component_path}",
+    "data": {
+      "api_key": "CometServer1",
+      "access_token": "1762962270_urn:aaid:sc:US:39f5e653-ad73-4d06-923e-ddf0a8356e15;public_a5d90b433d8830005ef31a037940364dd3d68643"
+    }
+  },
+  "ownerId": "40F0292F5E4376060A495C11@AdobeID",
+  "modifiedDate": 1762906152323
+}
