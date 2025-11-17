@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  weaviate:
+    image: semitechnologies/weaviate:1.25.3
+    restart: unless-stopped
+    ports:
+      - "${WEAVIATE_PORT:-8090}:8080"
+      - "${WEAVIATE_GRPC_PORT:-50051}:50051"
+    environment:
+      QUERY_DEFAULTS_LIMIT: 20
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+      PERSISTENCE_DATA_PATH: /var/lib/weaviate
+      DEFAULT_VECTORIZER_MODULE: text2vec-openai
+      ENABLE_MODULES: text2vec-openai
+      CLUSTER_HOSTNAME: node1
+      TEXT2VEC_OPENAI_MODEL: text-embedding-3-small
+      LOG_LEVEL: info
+      OPENAI_APIKEY: ${OPENAI_APIKEY}
+    volumes:
+      - weaviate-data:/var/lib/weaviate
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/v1/.well-known/ready"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  weaviate-data:
+    driver: local
