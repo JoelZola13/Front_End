@@ -1,16 +1,23 @@
 ## Weaviate Data Export
 
-This directory contains a raw snapshot of the Weaviate persistence volume that was running on the local development machine.
+This directory contains a raw snapshot of the Weaviate persistence volume after re-ingesting the StreetVoices chunks (≈3.8k objects).
 
 ### How it was collected
-1. Determined the active Docker volume (`weaviate_weaviate-data`) by inspecting the running `weaviate` container defined in `docker/weaviate/docker-compose.weaviate.yml`.
-2. Ran a temporary Alpine container to copy everything from `/var/lib/weaviate` inside that volume into this repository while preserving the directory structure.
+1. Confirmed ingestion via `scripts/ingest_weaviate.py` (`Weaviate total objects: 3830`).
+2. Stopped the container: `docker compose -f docker/weaviate/docker-compose.weaviate.yml down`.
+3. Copied the `weaviate_weaviate-data` volume with a temporary Alpine container:
+   ```bash
+   docker run --rm \
+     -v weaviate_weaviate-data:/src \
+     -v "$(pwd)/weaviate_export/volume_data":/dest \
+     alpine sh -c "cd /src && cp -a . /dest && chown -R 1000:1000 /dest"
+   ```
 
 ### Contents
-- `volume_data/` &mdash; files directly mirrored from the Docker volume (e.g. `schema.db`, `classifications.db`, `raft/`).
+- `volume_data/schema.db`, `classifications.db`, `modules.db`, `raft/raft.db`, and the per-class directories (e.g., `servicechunks/MXQxlG4ieakF/...`) that include the vector index and payload files.
 
 ### Restoring
-To restore this snapshot into a fresh Weaviate volume:
+On any machine with the same docker-compose setup:
 ```bash
 docker compose -f docker/weaviate/docker-compose.weaviate.yml down
 docker run --rm \
